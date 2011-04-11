@@ -10,7 +10,7 @@ Adds more options to control where Sharedaddy is being displayed.
 
 == Description ==
 
-You can't restrict Sharedaddy only to posts or pages. That's why this plugin exists.
+You can't restrict Sharedaddy only to posts or pages. That's why this plugin exists, now you can control Sharedaddy for your post types too.
 
 == Installation ==
 
