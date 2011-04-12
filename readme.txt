@@ -1,6 +1,6 @@
 === Sharedaddy More Control ===
 Contributors: sushkov
-Tags: sharedaddy, extends, control, posts, pages
+Tags: sharedaddy, extends, control, posts, types, cpt
 Requires at least: WordPress 3.0
 Tested up to: WordPress 3.1.1
 Stable tag: 0.1
@@ -18,7 +18,7 @@ Please follow the [standard installation procedure for WordPress plugins](http:/
 
 == Frequently Asked Questions ==
 
-Before asking questions, please check the [video](http://stas.github.com/sharedaddy-more-control).
+Before asking questions, please check the [github page](http://github.com/stas/sharedaddy-more-control).
 
 == Changelog ==
 
