@@ -3,15 +3,9 @@
         <label for="show-more"><?php _e( 'Show buttons only for such post types', 'sharedaddy-mc' ); ?></label>
     </th>
     <td>
-        <select id="show-more" name="show_more">
-            <option <?php selected( '', $show_more ); ?> value="">
-                <?php _e( 'All', 'sharedaddy-mc' ); ?>
-            </option>
-            <?php foreach ( $options as $o ): ?>
-            <option <?php selected( $o->name, $show_more ); ?> value="<?php echo $o->name ?>">
-                <?php echo $o->label; ?>
-            </option>
-            <?php endforeach; ?>
-        </select>
+        <?php foreach ( $options as $o ) : ?>
+            <input type="checkbox" <?php checked( in_array( $o->name, $show_more ) ); ?> name="show_more[<?php echo $o->name ?>]" id="show_more_<?php echo $o->name; ?>">
+            <label for="show_more_<?php echo $o->name; ?>"><?php echo $o->label; ?></label>
+        <?php endforeach; ?>
     </td>
 </tr>

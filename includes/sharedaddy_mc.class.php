@@ -16,10 +16,12 @@ class SharedaddyMoreControl {
      * @return Bool, same as $show
      */
     function sharing_show( $show, $post ) {
+        $post_option = get_post_meta( $post->ID, 'sharing_disabled', false );
         $restrict_to = get_option( 'sharedaddy-mc-restrict-to' );
         
-        if( $restrict_to )
-            if( is_object( $post ) && $post->post_type != $restrict_to )
+        // Check if per post option is not in conflict
+        if( $restrict_to && $post_option )
+            if( is_object( $post ) && !in_array( $post->post_type, $restrict_to ) )
                 $show = false;
         
         return $show;
@@ -38,12 +40,13 @@ class SharedaddyMoreControl {
      * Hook to save extended options
      */
     function update() {
-        $show_more = null;
+        $show_more = array();
         $post_types = array_keys( get_post_types( array( 'public' => true ) ) );
         
-        if( isset( $_POST['show_more'] ) )
-            if( in_array( $_POST['show_more'], $post_types ) )
-                $show_more = $_POST['show_more'];
+        if( isset( $_POST['show_more'] ) && count( $_POST['show_more'] ) )
+            foreach( $_POST['show_more'] as $o => $v )
+                if( in_array( $o, $post_types ) && $v )
+                    $show_more[] = $o;
         
         update_option( 'sharedaddy-mc-restrict-to', $show_more );
     }
