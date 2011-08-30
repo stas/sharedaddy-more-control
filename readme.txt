@@ -2,8 +2,8 @@
 Contributors: sushkov
 Tags: sharedaddy, extends, control, posts, types, cpt
 Requires at least: WordPress 3.0
-Tested up to: WordPress 3.2
-Stable tag: 0.2
+Tested up to: WordPress 3.2.1
+Stable tag: 0.3
 Donate link: http://stas.nerd.ro/pub/donate/
 
 Adds more options to control where Sharedaddy is being displayed.
@@ -23,6 +23,9 @@ Once installed, go to `Settings` → `Sharing` → Find _Show buttons only for s
 Before asking questions, please check the [github page](http://github.com/stas/sharedaddy-more-control).
 
 == Changelog ==
+
+= 0.3 =
+* Fix for `index only problem` [props mfive](http://wordpress.org/support/topic/plugin-sharedaddy-more-control-sharedaddy-more-control)
 
 = 0.2 =
 * Multiple post types can be selected now.

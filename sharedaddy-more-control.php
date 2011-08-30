@@ -4,7 +4,7 @@ Plugin Name: Sharedaddy More Control
 Plugin URI: http://wordpress.org/extend/plugins/sharedaddy-more-control/
 Description: Adds more options to control where Sharedaddy is being displayed
 Author: Stas Sușcov
-Version: 0.2
+Version: 0.3
 Author URI: http://stas.nerd.ro/
 */
 
