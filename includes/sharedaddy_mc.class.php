@@ -20,9 +20,11 @@ class SharedaddyMoreControl {
         $restrict_to = get_option( 'sharedaddy-mc-restrict-to' );
         
         // Check if per post option is not in conflict
-        if( $restrict_to && $post_option )
+        if( !empty( $restrict_to ) && empty( $post_option ) )
             if( is_object( $post ) && !in_array( $post->post_type, $restrict_to ) )
                 $show = false;
+            else
+                $show = true;
         
         return $show;
     }
